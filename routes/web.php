@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\FrontendController;
+// use App\Http\Controllers\Backend\CategoryController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +21,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('backend.layouts.app');
-});
+// Route::get('/', function () {
+//     return view('frontend.layouts.app');
+// });
 
-// Route::get();
+Route::get('/',[FrontendController::class, 'index']);
+// Route::get('/',[CategoryController::class, 'index']);
